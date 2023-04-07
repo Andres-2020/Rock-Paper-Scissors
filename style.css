@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* outline: solid red; */
+}
+
+body, html {
+    height: 100%;
+}
+
+body, main, #score, .display, .choice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav, footer, #points, #buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer {
+    background-color: rgb(45,40,69);
+    width: 100%;
+    padding: 20px;
+}
+
+nav {
+    gap: 20px;
+}
+
+main {
+    background-color: rgb(61,53,104);
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    gap: 35px;
+}
+
+#score {
+    gap: 35px;
+}
+
+#points {
+    gap: 120px;
+}
+
+.display, .choice {
+    gap: 8px;
+}
+
+#buttons {
+    gap: 45px;
+}
+
+.link {
+    transition: 0.5s ease;
+}
+
+.link:hover {
+    transform: scale(1.08, 1.08);
+}
+
+a {
+    transition: 0.5s ease;
+}
+
+a:hover {
+    color: rgb(255,209,91);
+}
+
+button {
+    background-color: rgb(33,173,145);
+    border-radius: 12px;
+    border-style: none;
+    height: 45px;
+    width: 130px;
+    transition: 0.5s ease;
+}
+
+button:hover {
+    background-color: rgb(40, 116, 100);
+    transform: scale(1.1, 1.1);
+}
+
+button:active {
+    background-color: rgb(33,173,145);
+    border-radius: 12px;
+    border-style: none;
+    height: 45px;
+    width: 130px;
+    transition: 0s;
+}
+
+img {
+    height: 100px;
+    width: auto;
+}
+
+.b1 {
+    animation-name: textAnimation;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.b2{
+    animation-name: textAnimation;
+    animation-duration: 10s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+.b3{
+    animation-name: textAnimation;
+    animation-duration: 10s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textAnimation {
+    0%{color: rgb(255,255,255);}
+    25%{color: rgb(255, 255, 255);}
+    50%{color: rgb(250, 192, 45);}
+    75%{color: rgb(255, 255, 255);}
+    100%{color: rgb(255,255,255);}
+}
+
+@media all and (max-width: 500px) {
+    * {
+        font-size: 18px;
+    }
+
+    img {
+        height: 70px;
+        width: auto;
+    }
+
+    button {
+        height: 35px;
+        width: 110px;
+    }
+
+    button:active {
+        height: 35px;
+        width: 110px;
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    #score {
+        gap: 5px;
+    }
+
+    .display, .choice {
+        gap: 3px;
+    }
+    
+    #buttons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .b1, .b2, .b3 {
+        animation-name: none;
+    }
+}
